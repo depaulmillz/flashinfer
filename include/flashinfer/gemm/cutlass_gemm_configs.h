@@ -147,6 +147,10 @@ enum class CutlassTileConfigSM120 {
   // Signals that we should run heuristics do choose a config
   ChooseWithHeuristic,
 
+  CtaShape128x32x128B,
+  CtaShape128x32x64B,
+  CtaShape128x64x128B,
+  CtaShape128x64x64B,
   CtaShape128x128x128B,
   CtaShape128x128x64B,
   CtaShape256x128x64B,
