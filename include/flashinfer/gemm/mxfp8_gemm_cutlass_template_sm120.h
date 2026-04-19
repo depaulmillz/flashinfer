@@ -139,8 +139,9 @@ class CutlassMxfp8GemmRunnerSm120 : public virtual CutlassMxfp8GemmRunnerInterfa
     std::vector<CutlassGemmConfig> configs;
     configs.reserve(tiles.size());
     for (auto const& tile : tiles) {
+      // TODO: Swap AB not added here yet but it is straightforward to do
       configs.emplace_back(tile, MainloopScheduleType::AUTO, EpilogueScheduleType::AUTO,
-                           ClusterShape::ClusterShape_1x1x1);
+                           ClusterShape::ClusterShape_1x1x1, /*swap_ab*/ false);
     }
     return configs;
   }
